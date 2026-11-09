@@ -1,3 +1,4 @@
+# Top Version 1.1 - 2026-11-09
 # Load the project-local .env before importing config or other modules
 # that read environment variables.
 from pathlib import Path

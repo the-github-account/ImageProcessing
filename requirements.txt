@@ -1,0 +1,6 @@
+opencv-python
+numpy
+ultralytics
+pydrive2
+oauth2client
+python-dotenv

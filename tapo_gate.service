@@ -1,0 +1,21 @@
+[Unit]
+Description=Tapo Human-Only CCTV Motion Detection
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=pramod
+WorkingDirectory=/home/pramod/Desktop/Work/Tapo
+EnvironmentFile=/home/pramod/Desktop/Work/Tapo/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/pramod/Desktop/Work/Tapo/venv/bin/python /home/pramod/Desktop/Work/Tapo/main.py
+Restart=on-failure
+RestartSec=10
+KillSignal=SIGTERM
+TimeoutStopSec=45
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
